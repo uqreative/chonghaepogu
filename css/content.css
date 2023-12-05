@@ -24,6 +24,15 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    scroll-snap-type: x mandatory;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* about us  */
@@ -85,6 +94,23 @@ nav.navbar {
     font-weight: 600;
 }
 
+.banner-top-index > .top-tittle {
+    background-color: #000;
+    background-image: url(/images/index-image_top.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1080px;
+    flex-shrink: 0;
+    margin-top: -55px;
+    margin-bottom: 0 !important;
+}
+
+.banner-top-index > .top-tittle > .container {
+    padding-top: 25rem;
+}
+
+
 .banner-top-aboutus > .top-tittle {
     background-color: #000;
     background-image: url(/images/top-image.jpg);
@@ -122,6 +148,32 @@ nav.navbar {
 /* =============================================================================================================== 
 image section 
 =============================================================================================================== */ 
+.index-image {
+    width: 100%;
+    height: 930px;
+    flex-shrink: 0;
+    padding-top: 360px;
+}
+
+.index-image.left {
+    background: url(/images/index_section2_image-left.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.index-image.center {
+    background: url(/images/index_section2_image-center.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.index-image.right {
+    background: url(/images/index_section2_image-right.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .square-image-left {
     width: 100%;
@@ -145,7 +197,7 @@ image section
     width: 100%;
     height: 640px;
     flex-shrink: 0;
-    background: url(/images/about-us-imageSquare-right.jpg);
+    background: url(/images/about-us-imageSquare-center.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -234,34 +286,6 @@ image section
     background-size: cover;
 }
 
-.product-introduction-image-1 {
-    width: 100%;
-    height: 960px;
-    flex-shrink: 0;
-    background: url(/images/product-introduction-image01.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.product-introduction-image-2 {
-    width: 100%;
-    height: 960px;
-    flex-shrink: 0;
-    background: url(/images/product-introduction-image02.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.product-introduction-image-3 {
-    width: 100%;
-    height: 520px;
-    flex-shrink: 0;
-    background: url(/images/product-introduction-image03.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .abalone-story-image-1 {
     width: 100%;
     height: 760px;
@@ -287,6 +311,16 @@ image section
     height: 760px;
     flex-shrink: 0;
     background: url(/images/abalone-story-image03.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inquiry-image-1 {
+    width: 100%;
+    height: 760px;
+    flex-shrink: 0;
+    background: url(/images/product-inquiry-image01.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -392,6 +426,15 @@ about us - timeline - history section  END
 .text-inside-fullwidth-container {
     padding: 140px 50px 50px 100px;
 }
+.form-product-container {
+    padding: 140px 100px 50px 50px;
+}
+.form-product-container > div > .btn-submit {
+    background-color: #258FAD;
+    padding-top: 12px ;
+    padding-bottom: 12px ;
+    border: none;
+}
 
 .btn-naver-map {
     border-radius: 2px;
@@ -435,4 +478,68 @@ about us - timeline - history section  END
 }
 .cta-btn:active {
     background-color: #ece3af !important;
+}
+
+.card {
+    border-radius: 4px;
+    stroke: #D8D8D8;
+    padding: 20px 30px;
+}
+
+.card .card-body {
+    padding: 0;
+}
+
+.card .card-body .card-title {
+    color: #258FAD;
+}
+
+.card .card-body div .card-link {
+    text-decoration: none;
+    color: #258FAD;
+    font-weight: 600;
+}
+
+.pagination > .page-item {
+    color: #258FAD;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .index-image > div {
+        padding: 10px 50px;
+    }
+    footer {
+        padding: 10px 12px;
+    }
+    footer > .container > .row > .col-lg-6 > h5,
+    footer > .container > .row > .col-lg-6 > p {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    footer > .container > .row > .col-lg-6 > div > img {
+        margin: auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+      
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }
