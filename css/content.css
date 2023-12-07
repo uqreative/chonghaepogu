@@ -107,7 +107,12 @@ p.content {
 }
 
 .text-gold {
+    /* color: #FDD017 !important; */
     color: #DECD71 !important;
+}
+
+.text-default-color {
+    color: #6B6B6B !important;
 }
 
 .bg-section-abu {
@@ -165,6 +170,7 @@ img[src="/images/logo-organic.svg"]{
 }
 
 .section-navigation .nav .active {
+    /* color: #FDD017; */
     color: #DECD71;
     font-weight: 600;
 }
@@ -192,14 +198,14 @@ img[src="/images/logo-organic.svg"]{
     background-repeat: no-repeat;
     background-size: cover;
     /* width: 100vw; */
-    height: calc(40vh + 55px);
+    height: calc(50vh + 55px);
     flex-shrink: 0;
     margin-top: -55px;
     margin-bottom: 0 !important;
 }
 
 .banner-top-aboutus>.top-tittle>.container {
-    padding-top: 26vh;
+    padding-top: 30vh;
 }
 
 .banner-top-abalone-story>.top-tittle {
@@ -233,7 +239,7 @@ img[src="/images/logo-organic.svg"]{
 }
 
 .banner-top-product-introduction>.top-tittle>.container {
-    padding-top: 33vh;
+    padding-top: 30vh;
 }
 
 .banner-top-announcement>.top-tittle {
@@ -243,14 +249,14 @@ img[src="/images/logo-organic.svg"]{
     background-repeat: no-repeat;
     background-size: cover;
     /* width: 100vw; */
-    height: 720px;
+    height: calc(50vh + 55px);
     flex-shrink: 0;
     margin-top: -55px;
     margin-bottom: 0 !important;
 }
 
 .banner-top-announcement>.top-tittle>.container {
-    padding-top: 20rem;
+    padding-top: 30vh;
 }
 
 .banner-top-inquiry>.top-tittle {
@@ -260,14 +266,14 @@ img[src="/images/logo-organic.svg"]{
     background-repeat: no-repeat;
     background-size: cover;
     /* width: 100vw; */
-    height: 720px;
+    height: calc(50vh + 55px);
     flex-shrink: 0;
     margin-top: -55px;
     margin-bottom: 0 !important;
 }
 
 .banner-top-inquiry>.top-tittle>.container {
-    padding-top: 20rem;
+    padding-top: 30vh;
 }
 
 /* =============================================================================================================== 
@@ -331,9 +337,9 @@ image section
     background-size: cover;
 }
 
-.square-product-image-left {
+/* .square-product-image-left {
     width: 100%;
-    height: 640px;
+    height: 400px;
     flex-shrink: 0;
     background: url(/images/product-imageSquare-left.jpg);
     background-position: center;
@@ -343,7 +349,7 @@ image section
 
 .square-product-image-center {
     width: 100%;
-    height: 640px;
+    height: 400px;
     flex-shrink: 0;
     background: url(/images/product-imageSquare-center.jpg);
     background-position: center;
@@ -353,13 +359,13 @@ image section
 
 .square-product-image-right {
     width: 100%;
-    height: 640px;
+    height: 400px;
     flex-shrink: 0;
     background: url(/images/product-imageSquare-right.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .history-image {
     width: 100%;
@@ -403,7 +409,7 @@ image section
 
 .product-introduction-image-2 {
     width: 100%;
-    height: 960px;
+    height: 100%;
     flex-shrink: 0;
     background: url(/images/product-introduction-image02.jpg);
     background-position: center;
@@ -423,7 +429,8 @@ image section
 
 .abalone-story-image-1 {
     width: 100%;
-    height: 760px;
+    height: 100%;
+    min-height: 400px;
     flex-shrink: 0;
     background: url(/images/abalone-story-image01.jpg);
     background-position: center;
@@ -433,7 +440,8 @@ image section
 
 .abalone-story-image-2 {
     width: 100%;
-    height: 760px;
+    height: 100%;
+    min-height: 400px;
     flex-shrink: 0;
     background: url(/images/abalone-story-image02.jpg);
     background-position: center;
@@ -443,7 +451,8 @@ image section
 
 .abalone-story-image-3 {
     width: 100%;
-    height: 760px;
+    height: 100%;
+    min-height: 400px;
     flex-shrink: 0;
     background: url(/images/abalone-story-image03.jpg);
     background-position: center;
@@ -453,7 +462,8 @@ image section
 
 .inquiry-image-1 {
     width: 100%;
-    height: 760px;
+    height: 100%;
+    min-height: 600px;
     flex-shrink: 0;
     background: url(/images/product-inquiry-image01.jpg);
     background-position: center;
@@ -553,32 +563,18 @@ about us - timeline - history section
 about us - timeline - history section  END 
 =============================================================================================================== */
 
-.row.two-col {
-    width: 90vw;
-    margin: auto;
+.form-control.inquiry {
+    height: 20vh;    
 }
 
-.text-inside-fullwidth-container.left {
-    padding: 90px 80px 50px 50px;
-}
-
-.text-inside-fullwidth-container.right {
-    padding: 90px 50px 50px 80px;
-}
-
-.text-inside-fullwidth-container>p {
-    line-height: 2;
-}
-
-.form-product-container {
-    padding: 140px 100px 50px 50px;
-}
-
-.form-product-container>div>.btn-submit {
+.btn-submit {
     background-color: #258FAD;
     padding-top: 12px;
     padding-bottom: 12px;
     border: none;
+}
+.btn-submit:hover {
+    background-color: #18819e;
 }
 
 .container.certificate {
@@ -631,9 +627,9 @@ about us - timeline - history section  END
 
 .cta-btn {
     background-color: #DECD71;
-    color: #155571;
+    color: #000;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 9px 36px;
 }
 
@@ -679,6 +675,15 @@ about us - timeline - history section  END
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
+    .section-navigation .nav .nav-link {
+        text-align: center;
+        width: 90%;
+        border-bottom: 1px solid #31443c;
+    }
+    .section-navigation .nav .nav-link:last-child {
+        border-bottom: none;
+    }
+
     .banner-top-index>.top-tittle>.container {
         padding-top: 32vh;
     }
@@ -687,9 +692,50 @@ about us - timeline - history section  END
         padding-top: 29vh;
     }
 
+    .banner-top-product-introduction>.top-tittle {
+        height: 40vh;
+    }
+    .banner-top-product-introduction>.top-tittle>.container {
+        padding-top: 28vh;
+    }
+
+    .product-introduction-image-1 {
+        display: none;
+        /* height: 30vh; */
+    }
+
+    p.content {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
     img[src="/images/logo-organic.svg"]{
         width: 90px;
         margin-bottom: 10px;
+    }
+
+    .product-introduction-image-3 {
+        height: 280px;
+    }
+
+    .environtment-image-1 {
+        height: 50vh;
+    }
+    
+    .environtment-image-2 {
+        height: 50vh;
+    }
+
+    .inquiry-image-1 {
+        height: 40vh;
+    }
+
+    .cta-section {
+        padding-top: 2.5rem;
+    }
+
+    .cta-btn {
+        font-size: 18px;
     }
 
     #big-tittle {
@@ -728,10 +774,19 @@ about us - timeline - history section  END
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+    
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .banner-top-index>.top-tittle>.container {
+        padding-top: 40vh;
+    }
+    .inquiry-image-1 {
+        height: 40vh;
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
