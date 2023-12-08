@@ -82,7 +82,7 @@
 			</nav>
 
 			<!-- environtment-sub-section 3 -->
-			<div class="container-fluid bg-section-abu px-0">
+			<div class="container bg-section-abu px-0 my-5">
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="inquiry-image-1"></div>
@@ -90,11 +90,27 @@
 					<div class="col-lg-6">
 						<div class="px-4 px-lg-5 pt-4 pt-lg-5 pb-5">
 							<h3 class="text-center text-lg-start">제품문의</h3>
+							<p class="content text-center text-lg-start">언제든지 저희에게 연락 주시기 바랍니다. 최대한 빨리 연락드리겠습니다.</p>
 							<div class="d-grid gap-4 mt-4">
-								<input type="text" class="form-control" placeholder="이름" aria-label="name">
+
+								<div class="form-floating">
+									<input type="text" class="form-control" id="floatingInput" placeholder="여기에 이름을 입력해주세요">
+									<label for="floatingInput">이름</label>
+								</div>
+								<div class="form-floating">
+									<input type="email" class="form-control" id="floatingPassword" placeholder="이 연락처 주소를 통해 귀하의 답변에 답변해 드리겠습니다.">
+									<label for="floatingPassword">연락처</label>
+								</div>
+								<div class="form-floating">
+									<textarea class="form-control inquiry" placeholder="내용" id="floatingTextarea"></textarea>
+									<label for="floatingTextarea">내용</label>
+								</div>
+								<button class="btn btn-primary btn-submit" type="submit">문의하기</button>
+
+								<!-- <input type="text" class="form-control" placeholder="이름" aria-label="name">
 								<input type="text" class="form-control" placeholder="연락처" aria-label="contact">
 								<textarea class="form-control inquiry" placeholder="내용" aria-label="detail"></textarea>
-								<button class="btn btn-primary btn-submit" type="submit">문의하기</button>
+								<button class="btn btn-primary btn-submit" type="submit">문의하기</button> -->
 							</div>
 						</div>
 					</div>

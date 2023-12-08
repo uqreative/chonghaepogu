@@ -775,7 +775,9 @@ about us - timeline - history section  END
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    /* .inquiry-image-1 {
+        height: 40vh;
+    }     */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -783,9 +785,7 @@ about us - timeline - history section  END
     .banner-top-index>.top-tittle>.container {
         padding-top: 40vh;
     }
-    .inquiry-image-1 {
-        height: 40vh;
-    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
