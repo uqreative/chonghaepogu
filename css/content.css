@@ -671,6 +671,10 @@ about us - timeline - history section  END
     /* height: 65vh; */
 }
 
+.title-judul {
+    margin-bottom: 16px;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
