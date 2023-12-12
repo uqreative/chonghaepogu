@@ -119,24 +119,24 @@ p.content {
     background-color: #FAFAFA;
 }
 
-nav.navbar {
+.gnb_area nav.navbar {
     background-color: rgba(0, 0, 0, 0.65) !important;
 }
 
-.navbar-brand img {
+.gnb_area .navbar-brand img {
     height: 100%;
 }
-.navbar-collapse>.btn {
+.gnb_area .navbar-collapse>.btn {
     padding: 8px 16px 10px 16px;
 }
 
-.nav-link {
+.gnb_area .nav-link {
     font-size: 21px;
     font-style: normal;
     font-weight: 600;
 }
 
-img[src="/images/logo-organic.svg"]{
+#organic-image-top img[src="/images/logo-organic.svg"]{
     width: 140px;
     margin-bottom: 20px;
 }
@@ -151,16 +151,16 @@ img[src="/images/logo-organic.svg"]{
 }
 
 /* nav section pills  */
-.section-navigation {
+#nav-menu-section-top {
     background-color: #0C2C1F;
     height: 100%;
 }
 
-.section-navigation .nav {
+#nav-menu-section-top .nav {
     height: 100%;
 }
 
-.section-navigation .nav .nav-link {
+#nav-menu-section-top  .nav .nav-link {
     font-size: 21px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -169,7 +169,7 @@ img[src="/images/logo-organic.svg"]{
     color: white;
 }
 
-.section-navigation .nav .active {
+#nav-menu-section-top .nav .active {
     /* color: #FDD017; */
     color: #DECD71;
     font-weight: 600;
