@@ -675,6 +675,25 @@ about us - timeline - history section  END
     margin-bottom: 16px;
 }
 
+.inquiry-image-1.image-container {
+    display: flex;
+    align-content: stretch;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: center;
+}
+.inquiry-image-1.image-container div {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding : 20px 20px;
+    flex-basis: 100%;
+    
+}
+.inquiry-image-1.image-container div p {
+    margin-bottom: 0;
+}
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -770,6 +789,24 @@ about us - timeline - history section  END
         margin-top: 10px;
         width: 100%;
         height: 65vh;
+    }
+
+    .inquiry-image-1.image-container {
+        display: flex;
+        align-content: stretch;
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .inquiry-image-1.image-container div {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.65);
+        padding : 20px 20px;
+        flex-basis: 100%;
+        
+    }
+    .inquiry-image-1.image-container div p {
+        margin-bottom: 0;
     }
 
     footer {

@@ -81,8 +81,8 @@
 			<!-- hero banner end  -->
 
 			<!-- nav section  -->
-			<nav id="nav-menu-section-top"  class=" align-middle">
-				<div class="nav nav-tabs ms-auto me-auto justify-content-center" >
+			<nav id="nav-menu-section-top"  class="section-navigation align-middle">
+				<div class="nav nav-tabs ms-auto me-auto justify-content-center" id="nav-tab" role="tablist">
 					<button class="nav-link active" id="nav-greetings-tab" data-bs-toggle="tab"
 						data-bs-target="#nav-greetings" type="button" role="tab" aria-controls="nav-greetings"
 						aria-selected="true">제품문의</button>
@@ -93,30 +93,36 @@
 			<div class="container bg-section-abu px-0 my-5">
 				<div class="row">
 					<div class="col-lg-6">
-						<div class="inquiry-image-1"></div>
+						<div class="inquiry-image-1 image-container">
+							<div >
+								<h2 >대한민국 1호!</h2>
+								<p class="content">친환경 양식 생산자 백 점복님</p>
+								<p>(청해포구 대표의 아버지)</p>
+							</div>
+						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="px-4 px-lg-5 pt-4 pt-lg-5 pb-5">
 							<h3 class="text-center text-lg-start">제품문의</h3>
 							<p class="content text-center text-lg-start">언제든지 저희에게 연락 주시기 바랍니다. 최대한 빨리 연락드리겠습니다.</p>
-							<div class="d-grid gap-4 mt-4">
-
-								<div class="form-floating">
-									<input type="text" class="form-control" id="floatingInput" placeholder=" ">
-									<label for="floatingInput">이름</label>
+							<form id="inquiry" name="inquiry">
+								<div class="d-grid gap-4 mt-4">
+									<div class="form-floating">
+										<input id="name" type="text" name="name" class="form-control" id="floatingInput" placeholder=" " required>
+										<label for="floatingInput">이름</label>
+									</div>
+									<div class="form-floating">
+										<input id="email" type="email" name="email" class="form-control" id="floatingPassword" placeholder=" " required>
+										<label for="floatingPassword">연락처</label>
+									</div>
+									<div class="form-floating">
+										<textarea id="message" name="message" class="form-control inquiry" id="floatingTextarea"
+											placeholder=" "></textarea>
+										<label for="floatingTextarea">내용</label>
+									</div>
+									<button class="btn btn-primary btn-submit" type="submit">문의하기</button>
 								</div>
-								<div class="form-floating">
-									<input type="email" class="form-control" id="floatingPassword" placeholder=" ">
-									<label for="floatingPassword">연락처</label>
-								</div>
-								<div class="form-floating">
-									<textarea class="form-control inquiry" id="floatingTextarea"
-										placeholder=" "></textarea>
-									<label for="floatingTextarea">내용</label>
-								</div>
-								<button class="btn btn-primary btn-submit" type="submit">문의하기</button>
-
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -188,10 +194,56 @@
 
 	<!-- Lightbox image gallery -->
 	<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-
+	<!-- Jquery  -->
+	<script type="text/javascript" src="/js/jquery-1.12.2.min.js"></script>
 	<!-- custom js  -->
 	<script src="/js/designer.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#inquiry').on('submit', function(e) {
+				e.preventDefault(); // Prevent the default form submission
 
+				var formData = new FormData(this);
+
+				formData.append('submit_inquiry', true);
+
+				$.ajax({
+					url: 'proc.php',
+					type: 'POST',
+					data: formData,
+					contentType: false,
+					processData: false,
+					success: function(response) {
+						// Handle different response scenarios
+						if (response.success) {
+							swal({
+								icon: 'success',
+								title: '성공하다',
+								text: response.message
+							});
+
+							// Reset the form
+							$('#inquiry')[0].reset();
+						} else {
+							// Handle server-side validation errors or other error scenarios
+							swal({
+								icon: 'error',
+								title: '실패하다',
+								text: response.message
+							});
+						}
+					},
+					error: function(xhr, textStatus, errorThrown) {
+						// Handle AJAX error for the second call
+						console.error('AJAX Error:', textStatus, errorThrown);
+					}
+				});
+			});
+
+		});
+		 
+	</script>
 </body>
 
 </html>
