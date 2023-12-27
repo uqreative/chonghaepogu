@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>청해포구 - Product Inquiry</title>
-	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
 	<!-- bootstrap v5.3.2 css -->
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
@@ -96,7 +96,7 @@
 						<div class="inquiry-image-1 image-container">
 							<div >
 								<h2 >대한민국 1호!</h2>
-								<p class="content">친환경 양식 생산자 백 점복님</p>
+								<p class="content">친환경 양식 생산자 백점복 님</p>
 								<p>(청해포구 대표의 아버지)</p>
 							</div>
 						</div>
@@ -104,21 +104,34 @@
 					<div class="col-lg-6">
 						<div class="px-4 px-lg-5 pt-4 pt-lg-5 pb-5">
 							<h3 class="text-center text-lg-start">제품문의</h3>
-							<p class="content text-center text-lg-start">언제든지 저희에게 연락 주시기 바랍니다. 최대한 빨리 연락드리겠습니다.</p>
+							<p class="content text-center text-lg-start">제품에 대한 문의글을 남겨주세요. 최대한 빠르게 연락 드리겠습니다.</p>
 							<form id="inquiry" name="inquiry">
 								<div class="d-grid gap-4 mt-4">
 									<div class="form-floating">
-										<input id="name" type="text" name="name" class="form-control" id="floatingInput" placeholder=" " required>
+										<input id="name" type="text" name="name" class="form-control" id="floatingInput" placeholder=" ">
 										<label for="floatingInput">이름</label>
 									</div>
 									<div class="form-floating">
-										<input id="email" type="email" name="email" class="form-control" id="floatingPassword" placeholder=" " required>
-										<label for="floatingPassword">연락처</label>
+										<input id="email" type="text" name="email" class="form-control" id="floatingEmail" placeholder=" ">
+										<label for="floatingEmail">이메일</label>
 									</div>
 									<div class="form-floating">
 										<textarea id="message" name="message" class="form-control inquiry" id="floatingTextarea"
 											placeholder=" "></textarea>
 										<label for="floatingTextarea">내용</label>
+									</div>
+									<div style="display: grid;grid-template-columns: 50% 50% ;">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+											<label class="form-check-label" for="defaultCheck1">
+												<p class="mb-0">개인정보처리방침 동의 O</p>
+											</label>
+										</div>
+										<p class="mb-0 text-end">
+											<a href="#">
+												보기
+											</a>
+										</p>
 									</div>
 									<button class="btn btn-primary btn-submit" type="submit">문의하기</button>
 								</div>
@@ -137,13 +150,13 @@
 			<div class="row mt-4">
 				<div class="col-lg-8">
 					<div class="d-flex flex-column flex-lg-row gap-1 gap-lg-3">
-						<h5 class="mb-1 text-center text-lg-start px-4 px-lg-0">법인명 (상호) 어업회사법인 청해포구 주식회사</h5>
-						<p class=" text-center text-lg-start px-5 px-lg-0">주소 전라남도 완도군 완도읍 해변공원로 123, 1층</p>
+						<h5 class="mb-1 text-center text-lg-start px-4 px-lg-0"><!-- 법인명 (상호)  -->어업회사법인 청해포구 주식회사</h5>
+						<p class=" text-center text-lg-start px-5 px-lg-0">주소 : 전라남도 완도군 완도읍 해변공원로 123</p>
 					</div>
 
 					<div class="d-flex flex-column flex-lg-row gap-1 gap-lg-4">
 						<p class="text-center text-lg-start">사업자등록번호 507-87-00569</p>
-						<p class="text-center text-lg-start">통신판매업 신고 2019-전남완도-092</p>
+						<p class="text-center text-lg-start">통신판매업신고 2019-전남완도-092</p>
 					</div>
 
 					<div class="d-flex flex-column flex-lg-row gap-1 gap-lg-4">
@@ -175,14 +188,14 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="d-flex flex-column flex-lg-row gap-3 gap-lg-5 mb-4 mb-lg-0">
-							<div class="text-center"><a href="#">이용약관</a></div>
+							<!-- <div class="text-center"><a href="#">이용약관</a></div> -->
 							<div class="ms-lg-3 text-center"><a href="#">개인정보처리방침</a></div>
-							<div class="ms-lg-3 text-center"><a href="#">회사소개</a></div>
-							<div class="ms-lg-3 text-center"><a href="#">오시는 길</a></div>
+							<div class="ms-lg-3 text-center"><a href="/contents/01_about/about-us.html">회사소개</a></div>
+							<div class="ms-lg-3 text-center"><a href="/contents/01_about/about-us_direction.html">오시는 길</a></div>
 						</div>
 					</div>
 					<div class="col-lg-4">
-						<p class="text-center text-lg-end">©상호 청해포구. All Rights Reserved.</p>
+						<p class="text-center text-lg-end"><!-- ©상호 --> 청해포구. All Rights Reserved.</p>
 					</div>
 				</div>
 			</div>
@@ -204,41 +217,72 @@
 			$('#inquiry').on('submit', function(e) {
 				e.preventDefault(); // Prevent the default form submission
 
-				var formData = new FormData(this);
+				var isSelectValid = true;
 
-				formData.append('submit_inquiry', true);
+				var name = $('input[name="name"]').val().trim();
+				if (name === '') {
+					swal({
+						icon: 'warning',
+						title: '에러',
+						text: '이름 필드는 비워둘 수 없습니다!',
+					});
+					isSelectValid = false;
+					return false; // Stop the loop
+				}
 
-				$.ajax({
-					url: 'proc.php',
-					type: 'POST',
-					data: formData,
-					contentType: false,
-					processData: false,
-					success: function(response) {
-						// Handle different response scenarios
-						if (response.success) {
-							swal({
-								icon: 'success',
-								title: '성공하다',
-								text: response.message
-							});
+				var email = $('input[name="email"]').val().trim();
+				if (email === '') {
+					swal({
+						icon: 'warning',
+						title: '에러',
+						text: '이메일 필드는 비워둘 수 없습니다!',
+					});
+					isSelectValid = false;
+					return false; // Stop the loop
+				}
 
-							// Reset the form
-							$('#inquiry')[0].reset();
-						} else {
-							// Handle server-side validation errors or other error scenarios
-							swal({
-								icon: 'error',
-								title: '실패하다',
-								text: response.message
-							});
+				if (!isSelectValid) {
+					// Stop form submission if any field is empty
+					return;
+				}
+    			if (isSelectValid) {
+
+					var formData = new FormData(this);
+
+					formData.append('submit_inquiry', true);
+
+					$.ajax({
+						url: 'proc.php',
+						type: 'POST',
+						data: formData,
+						contentType: false,
+						processData: false,
+						success: function(response) {
+							// Handle different response scenarios
+							if (response.success) {
+								swal({
+									icon: 'success',
+									title: '문의가 완료 되었습니다.',
+									text: response.message
+								});
+
+								// Reset the form
+								$('#inquiry')[0].reset();
+							} else {
+								// Handle server-side validation errors or other error scenarios
+								swal({
+									icon: 'error',
+									title: '오류 발생으로 문의가 정상적으로 이루어지지 않았습니다.',
+									text: response.message
+								});
+							}
+						},
+						error: function(xhr, textStatus, errorThrown) {
+							// Handle AJAX error for the second call
+							console.error('AJAX Error:', textStatus, errorThrown);
 						}
-					},
-					error: function(xhr, textStatus, errorThrown) {
-						// Handle AJAX error for the second call
-						console.error('AJAX Error:', textStatus, errorThrown);
-					}
-				});
+					});
+				}
 			});
 
 		});

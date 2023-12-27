@@ -834,3 +834,80 @@ about us - timeline - history section  END
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+
+/* css image section update */
+.index-image.center:hover,.index-image.right:hover,.index-image.left:hover {
+    background-size: 110% 110%;
+    animation: mymove 0.5s;
+}
+
+@keyframes mymove {
+  from  {background-size: 100% 100%;}
+  to  {background-size: 110% 110%;}
+}
+
+.index-image .text-center{
+    transition: .5s;
+}
+
+.index-image:hover .text-center{
+    transform: translateY(-30px); transition: .5s;
+}
+/* end update */
+
+.search_bbs>.btn {
+    background-color: #258FAD;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.search_bbs>.btn:hover {
+    background-color: #147490;
+}
+
+.bbsSearch {
+    margin-top: 60px;
+}
+
+.ko-basic-list__num.notice {
+    padding: 4px 12px;
+    background: #222;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.bbsNew_container.v2 {
+    margin-top: 100px;
+}
+.bbsTitle_cont>.bbsDate>ul {
+    margin-bottom: 0px;
+}
+
+
+/* pagination */
+.pagination{display:flex; justify-content:center; align-items:center;margin-top: 60px;}
+.pagination a{display:flex; flex-flow:row wrap; justify-content:center; align-items:center; width:35px; height:35px;position: relative;color: #939393;font-size: 16px;transition: all 0.3s ease 0s;opacity: 1;}
+.pagination ol{display:flex; align-items:center;}
+.pagination ol li {margin: 0 3px;}
+.pagination ol li.on a {font-weight: 600;color: #222;}
+.pagination ol li:not(.on) a:hover {opacity: 0.7;}
+.pagination div[class^="page_control"] a{margin:0 3px; border:1px solid #ddd; font-size:0;}
+.pagination div[class^="page_control"] a:hover {border-color:#b7b7b7;}
+.pagination div[class^="page_control"]{display:flex; flex-flow:row wrap; align-items:center;margin: 0 9px;justify-content: center;align-content: center;flex-wrap: nowrap;}
+.pagination .btn_pager::after {content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: url(../../images/board/btn_pager.svg) no-repeat 52% 50% / 6px;opacity: 0.4;}
+.pagination .btn_pager.prev::after {background-position: 50% 50%; }
+.pagination .btn_pager.prev::after, .pagination .btn_end.first::after {transform: rotate(180deg);   -webkit-transform: rotate(180deg);}
+.pagination .btn_end::after {content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: url(../../images/board/btn_pager_end.svg) no-repeat 50% 13px / 9.1px;opacity: 0.4;}
+.pagination .btn_last::after {content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: url(../../images/board/btn_pager_end.svg) no-repeat 50% 13px / 9.1px;opacity: 0.4;}
+.pagination .btn_first::after {content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: url(../../images/board/btn_pager_end.svg) no-repeat 50% 13px / 9.1px;opacity: 0.4; transform: rotate(180deg);   -webkit-transform: rotate(180deg);}
+.pagination a {font-size: 0 !important;}
+.pagination a{margin:0 3px; border:1px solid #ddd; font-size:0;}
+.pagination>span {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+/* end pagination */
