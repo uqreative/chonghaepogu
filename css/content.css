@@ -10,23 +10,23 @@
 
 /* form active */
 .cus_design {
-    max-width: 400rem;
+    max-width: 400px;
 }
 
 .cus_design>ul>li {
     display: block;
     position: relative;
-    margin: 3rem 0px;
+    margin: 3px 0px;
 }
 
 .cus_design input[type="text"] {
     width: 100%;
-    height: 45rem;
+    height: 45px;
 }
 
 .cus_design select {
     width: 100%;
-    height: 45rem;
+    height: 45px;
 }
 
 .cus_design label {
@@ -35,7 +35,7 @@
     top: 50%;
     width: 90%;
     box-sizing: border-box;
-    padding: 0 5rem;
+    padding: 0 5px;
     background: #fff;
     transform: translateY(-50%);
 }
@@ -47,13 +47,13 @@
 .cus_design .active label {
     top: 10%;
     width: auto;
-    font-size: 11rem;
+    font-size: 11px;
 }
 
 .cus_design [data-form-design="select"] label {
     top: 10%;
     width: auto;
-    font-size: 12rem;
+    font-size: 12px;
     font-weight: 500;
 }
 
@@ -622,7 +622,7 @@ about us - timeline - history section  END
 }
 
 .cta-section {
-    padding-top: 6rem;
+    /* padding-top: 6px; */
 }
 
 .cta-btn {
@@ -754,7 +754,7 @@ about us - timeline - history section  END
     }
 
     .cta-section {
-        padding-top: 2.5rem;
+        padding-top: 2.5px;
     }
 
     .cta-btn {
@@ -911,3 +911,33 @@ about us - timeline - history section  END
     margin-right: 12px;
 }
 /* end pagination */
+
+
+.privacy-list>ol>li,
+.privacy-list>ol>ul>li,
+.privacy-list>ol>ul>ul>li  {
+    font-size: 18px;
+    line-height: 2;
+    color: #6b6b6b;
+}
+
+.privacy-list>ol>li:not(:first-child) {
+    margin-top: 20px;
+}
+.privacy-list>ol>ul>li {
+    list-style-type: disc;
+}
+.privacy-list>ol>ul>ul>li {
+    list-style-type: circle;
+}
+
+form#inquiry>div>.privacy-policy-check {
+    display: grid;
+    grid-template-columns: 60% 40% ;
+    align-items: center;
+}
+
+.privacy-policy-check>p>.btn:hover {
+    background-color: transparent;
+    border: 1px solid #efefef;
+}

@@ -493,3 +493,78 @@ input.button_new{height:52px; line-height:52px;}
 .pagination .btn_pager.prev::after {background-position: 50% 50%; }
 .pagination .btn_pager.prev::after, .pagination .btn_end.first::after {transform: rotate(180deg);   -webkit-transform: rotate(180deg);}
 .pagination .btn_end::after {content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: url(../../images/board/btn_pager_end.svg) no-repeat 50% 13px / 9.1px;opacity: 0.4;}
+
+
+
+
+/* bbsView */
+.bbsTitle{padding:42px 10px 45px !important; margin:0px !important; border-top:0; border-bottom:1px solid #585858; font-size:32px !important; font-weight:400 !important; color:#222 !important; text-align:center;}
+.bbsTitle:before{display:none !important;}
+.bbsTitle em{display:inline-block; margin-right:5px; color:#148f77;}
+.bbsTitle .reply{display:inline-block; position:relative; padding:5px 12px; margin:0 5px 3px 10px; background:#fff; border:1px solid #111; border-radius:3px; font-size:15px; color:#111; vertical-align:middle;}
+.bbsView{border-collapse:inherit; table-layout:fixed;}
+.bbsTitle ~ .bbsView{border-top:1px solid #000; margin-top:40px;}
+.bbsView > tbody > tr > th,
+.bbsView > tbody > tr > td,
+.bbsView > thead > tr > th{padding:20px 0; border-bottom:1px solid #eaecf1;}
+.bbsView > tbody > tr > th{text-align:left; font-weight:600;}
+.bbsView > tbody > tr > td{color:#777; word-break:break-all;}
+
+.bbsView .conts table,
+.bbsView .conts td,
+.bbsView .conts th{border:1px solid black}
+
+.bbsView th[data-view="file"]{border-top:1px solid #eaecf1;}
+.bbsView th[data-view="file"] + td{padding-left:25px; border-top:1px solid #eaecf1;}
+.bbsView th[data-view="file"],
+.bbsView th[data-view="date"],
+.bbsView th[data-view="count"]{padding-left:0;}
+.bbsView td.conts{padding:40px 20px; border:0;}
+
+.bbsView div.conts{min-height:350px;}
+.bbsView .conts .img{padding-bottom:30px;}
+.bbsView .conts .img img,
+.bbsView .conts img{max-width:100%; height:auto !important;}
+.bbsView textarea{resize:none; height:150px;}
+
+.bbsView td.date > span{margin-right:10px;}
+.bbsView td.category div{margin-top:3px;}
+.bbsView td.file > span{display:block; margin:2px 0;}
+.bbsView td.days input{width:110px; background:#e0e9f7; border-color:#9fb3d4;}
+.bbsView td.days span{display:inline-block; margin-right:5px;}
+.bbsView td.days span:after{content:','; display:inline-block;}
+.bbsView td.days span:last-child:after{display:none;}
+
+.bbsView div.conts table{margin-left:auto !important; margin-right:auto !important;}
+.bbsView .button{height:40px; line-height:39px; font-size:12px;}
+.bbsView .tip{ display:block; margin-top:10px; font-size:14px; word-break:keep-all; color:#999;}
+.bbsView .spam > span{display:inline-block; height:33px; line-height:33px; box-sizing:border-box; padding:0 10px; margin-right:10px; background:#222; color:#fff; letter-spacing:3px; font-size:12px;}
+.bbsView .spam > *{vertical-align:middle;}
+
+*[class^="bbs"] ~ .btn_area{padding-top:50px;}
+
+.bbsView.dl{border-top:1px solid #505c78;}
+.bbsTitle ~ .bbsView.dl{border-top-width:0;}
+/* bbsView - end */
+
+
+/* th,td tr에 여러개 들어갈 경우 */
+.bbsView.col tr td:not(:last-child){border-right-width:0 !important;}
+
+
+.join_area .bbsView{margin-top:30px;}	
+.join_area .bbsView td em{font-size:13px; word-break:keep-all;}
+
+.productWrite .bbsView{float:none; width:100%; margin-top:30rem;}
+.productWrite .bbsView{float:right; width:58%;}
+
+
+td>textarea#smart_content {
+	height: auto !important;
+	width: 100%;
+}
+
+td>textarea.inputFull {
+	height: auto !important;
+	width: 100%;
+}
