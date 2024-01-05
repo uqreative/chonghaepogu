@@ -151,15 +151,12 @@
 				</div>
 
 				<!-- greetings-sub-section 3  -->
-				<div class="container px-0 mb-0 mb-lg-5">
+				<!-- <div class="container px-0 mb-0 mb-lg-5">
 					<div class="row bg-section-abu">
-						<div class="col-lg-6 px-0">
-							<div class="history-image"></div>
-						</div>
-						<div class="col-lg-6 p-4 p-lg-5">
-							<h3 class="mb-0">연혁</h3>
-							<p>History</p>
-							<div class="timeline">
+						<div class="col-lg-12 p-4 p-lg-5">
+							<h3 class="mb-0 text-center">연혁</h3>
+							<p class=" text-center">History</p>
+							<div class="timeline d-flex justify-content-center">
 								<ul>
 									<li>
 										<span>1995년</span>
@@ -202,6 +199,70 @@
 							</div>
 						</div>
 					</div>
+				</div> -->
+
+				<div class="container pt-5 pt-lg-4 bg-section-abu">
+					<section class="pt-lg-5" id="timeline">
+						
+						<h3 class="mb-0 p-0 text-center">연혁</h3>
+						<p class="mt-lg-2 p-0 text-center">&nbsp;History</p>
+						<ul>
+							<li>
+								<i class="fa-brands ri-circle-fill"></i></i>
+								<div class="box-history-timeline show">
+									<h3 class="title">1995년</h3>
+									<p>
+										전복양식(노화도 직영양식장)
+									</p>
+								</div>
+							</li>
+							<li>
+								<i class="fa-brands ri-circle-fill"></i></i>
+								<div class="box-history-timeline show">
+									<h3 class="title">2016년</h3>
+									<p>
+										어업회사법인 청해포구 법인설립
+									</p>
+								</div>
+							</li>
+							<li>
+								<i class="fa-brands ri-circle-fill"></i>
+								<div class="box-history-timeline show">
+									<h3 class="title">2019년</h3>
+									<p>
+										2019년 – 생산자 직거래 판매장 개소(완도읍)
+									</p>
+								</div>
+							</li>
+							<li>
+								<i class="fa-brands ri-circle-fill"></i>
+								<div class="box-history-timeline show">
+									<h3 class="title">2021년</h3>
+									<p>
+										완도청해포구 상표등록(특허청) – 해양수산부 월특판 업체 선정
+									</p>
+								</div>
+							</li>
+							<li>
+								<i class="fa-brands ri-circle-fill"></i>
+								<div class="box-history-timeline show">
+									<h3 class="title">2022년</h3>
+									<p>
+										친환경 유기수산물 생산자 인증(인증번호 NO. 101-0057)
+									</p>
+								</div>
+							</li>
+							<li>
+								<i class="fa-brands ri-circle-fill"></i>
+								<div class="box-history-timeline show">
+									<h3 class="title"><span class="year">2023년</h3>
+									<p>
+										친환경 유기수산물 취급자 인증(인증번호 NO. 101-0112)
+									</p>
+								</div>
+							</li>
+						</ul>
+					</section>
 				</div>
 
 			</div>
@@ -274,6 +335,29 @@
 
 	<!-- custom js  -->
 	<script src="/js/designer.js"></script>
+
+	<!-- <script>
+			"use strict";
+
+			const boxes = document.querySelectorAll(".box-history-timeline");
+
+			window.addEventListener("scroll", DisplayContent);
+			DisplayContent();
+
+			function DisplayContent() {
+				const TriggerBottom = (window.innerHeight / 5) * 4.4;
+
+				boxes.forEach((box) => {
+					const topBox = box.getBoundingClientRect().top;
+
+					if (topBox < TriggerBottom) {
+						box.classList.add("show");
+					} else {
+						box.classList.remove("show");
+					}
+				});
+			}
+	</script> -->
 
 </body>
 
