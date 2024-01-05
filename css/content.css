@@ -704,7 +704,7 @@ about us - timeline - history section
     border-color: transparent #4eb1c8;
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     #timeline ul li .box-history-timeline {
       width: 350px;
     }
@@ -725,8 +725,29 @@ about us - timeline - history section
       left: -390px;
     }
   }
+
+
+  @media (max-width: 820px) {
+    #timeline ul li .box-history-timeline {
+        /* width: calc(100vw -90px); */
+        width: 75vw;
+      }
+      #timeline ul li {
+        margin-left: 30px;
+      }
+    /* left side content */
+    #timeline ul li:nth-child(even) .box-history-timeline {
+        left: 40px;
+      }
+    
+    #timeline ul li:nth-child(even) .box-history-timeline:before {
+        left: -15px;
+        border-width: 8px 16px 8px 0px;
+        border-color: transparent #4eb1c8;
+      }
+  }
   
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     #timeline>ul>li::before {
         height: 220px;
       }
@@ -744,7 +765,7 @@ about us - timeline - history section
       width: 70vw;
     }
   
-    /* left side conte */
+    /* left side content */
     #timeline ul li:nth-child(even) .box-history-timeline {
       left: 40px;
     }
