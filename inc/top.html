@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>청해포구</title>
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+	<!-- bootstrap v5.3.2 css -->
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/unable/board_renew.css">
+	<!-- remix icon  -->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+
+	<!-- css styling -->
+	<link rel="stylesheet" type="text/css" href="/css/content.css" />
+	<link rel="stylesheet" type="text/css" href="/css/cbbr.css">
+	<link rel="canonical" href="<?=$site[url]?>" />
+	<link rel="alternate" href="<?=$site[url]?>" />
+	<meta property="og:image" content="/images/ogimage.png">
+	<meta property="og:url" content="<?=$site[url]?>" />
+	<meta property="og:title" content="<?=$site[og_title]?>" />
+	<meta name="description"  content="<?=$site[description]?>" />
+	<meta property="og:description" content="<?=$site[og_description]?>" />
+	<meta property="og:site_name" content="<?=$site[og_site_name]?>" />
+	<meta property="naver-site-verification" content="<?=$site[naver_tag]?>" />
+	<meta name="google-site-verification" content="<?=$site[google_tag]?>" />
+	<meta property="og:type" content="website" />
+
+</head>
+	<body>
+	<?
+		if($m_main_){
+			$popup = @mysql_fetch_array(@mysql_query("SELECT * FROM koweb_program_config WHERE id='popup'"));
+			if($popup['state'] == "Y"){
+				include $_SERVER['DOCUMENT_ROOT']."/popup/_popup.php";
+				include $_SERVER['DOCUMENT_ROOT']."/popup/layer_popup.php";
+			}
+		}
+	?>
