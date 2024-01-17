@@ -128,12 +128,14 @@ p.content {
 }
 .gnb_area .navbar-collapse>.btn {
     padding: 8px 16px 10px 16px;
+    color: white;
 }
 
 .gnb_area .nav-link {
     font-size: 21px;
     font-style: normal;
     font-weight: 600;
+    color: #ffffffee !important;
 }
 
 #organic-image-top img[src="/images/logo-organic.svg"]{
